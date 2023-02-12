@@ -1,0 +1,23 @@
+.btn {
+    background-color: $dark-cyan;
+    border-radius: 8px;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 1rem 0;
+    transition: all ease-in-out 0.3s;
+    width: 100%;
+
+    &:hover {
+        background-color: $darker-cyan;
+        cursor: pointer;
+    }
+
+    svg {
+        margin: 0;
+    }
+}

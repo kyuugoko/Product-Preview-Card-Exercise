@@ -1,0 +1,89 @@
+.card {
+    background-color: $white;
+    border-radius: 8px;
+    display: grid;
+    max-width: 100%;
+    overflow: hidden;
+
+    &__image-mobile {
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+    }
+
+    &__image-desktop {
+        @media screen and (max-width:767px) {
+            display:none,;
+        }
+    }
+
+    &__body {
+        padding: 1.2rem;
+
+        @media screen and (min-width:768px) {
+            padding: 1.8rem;
+        }
+    }
+
+    &__subtitle {
+        color: $dark-grayish-blue;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.25rem;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        line-height: 1;
+        font-size: 2rem;
+        margin: 1rem 0;
+
+        @media screen and (min-width:768px) {
+            font-size: 2.3rem;
+            margin: 1.8rem 0;
+        }
+    }
+
+    &__description{
+        color: $dark-grayish-blue;
+        text-align: left;
+        line-height: 1.6;
+
+        @media screen and (min-width:768px) {
+            font-size: 1rem;
+        }
+    }
+
+    &__price {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 1rem 0;
+
+        &-current, &-sale {
+            margin: 0;
+        }
+
+        &-current {
+            color: $dark-cyan;
+            font-family: $title-font;
+            font-size: 2rem;
+        }
+
+        &-sale {
+            color: $dark-grayish-blue;
+            font-size: 10px;
+            text-decoration: line-through;
+        }
+
+        @media screen and (min-width:768px) {
+            margin: 1.9rem 0;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
